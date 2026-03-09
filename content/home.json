@@ -1,0 +1,34 @@
+{
+  "availability_enabled": true,
+  "availability_text": "Spots available",
+  "headline": "Secure indoor storage for collectors, classics, exotics, and weekend cars.",
+  "subheadline": "Climate-controlled space, 24/7 surveillance, easy in and out access, and a clean fully renovated facility right off Route 78 on US 22.",
+  "hero_image": "/media/uploads/facility-wide-1.jpg",
+  "hero_image_alt": "RPM Auto Vault facility interior with polished floors and stored vehicles",
+  "highlights": [
+    "Climate controlled",
+    "24/7 surveillance",
+    "Easy pickup and dropoff",
+    "On-site parking",
+    "2 minutes off Route 78",
+    "On US 22 in Lebanon"
+  ],
+  "stats": [
+    {
+      "label": "Location",
+      "value": "US 22, Lebanon"
+    },
+    {
+      "label": "Access",
+      "value": "Easy in and out"
+    },
+    {
+      "label": "Security",
+      "value": "24/7 monitored"
+    },
+    {
+      "label": "Facility",
+      "value": "Fully renovated"
+    }
+  ]
+}

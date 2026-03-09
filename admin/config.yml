@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "media/uploads"
+public_folder: "/media/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "site"
+    label: "Brand + Contact"
+    files:
+      - file: "content/site.json"
+        label: "Site Settings"
+        name: "site"
+        fields:
+          - { label: "Business name", name: "business_name", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Meta description", name: "meta_description", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "Instagram URL", name: "instagram_url", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Google Maps URL", name: "maps_url", widget: "string" }
+
+  - name: "home"
+    label: "Homepage"
+    files:
+      - file: "content/home.json"
+        label: "Home Content"
+        name: "home"
+        fields:
+          - { label: "Availability enabled", name: "availability_enabled", widget: "boolean", default: true }
+          - { label: "Availability text", name: "availability_text", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subheadline", name: "subheadline", widget: "text" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Hero image alt text", name: "hero_image_alt", widget: "string" }
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            field: { label: "Highlight", name: "highlight", widget: "string" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - file: "content/gallery.json"
+        label: "Facility Photos"
+        name: "gallery"
+        fields:
+          - label: "Featured images"
+            name: "featured"
+            widget: "list"
+            field: { label: "Image", name: "image", widget: "image" }
+          - label: "Facility gallery"
+            name: "facility_gallery"
+            widget: "list"
+            field: { label: "Image", name: "image", widget: "image" }
