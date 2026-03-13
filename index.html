@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RPM Auto Vault</title>
+  <meta name="description" content="RPM Auto Vault offers climate-controlled, monitored vehicle storage in Lebanon, NJ." />
+  <style>
+    :root{--text:#f4f4f1;--muted:#b7b7b2;--line:rgba(255,255,255,.08);--gold:#d7b062;--gold2:#9c7c3f;--shadow:0 18px 60px rgba(0,0,0,.35);--radius:22px;--max:1180px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at top left, rgba(215,176,98,.12), transparent 28%),linear-gradient(180deg, #060606 0%, #0a0a0a 100%);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+    img{display:block;max-width:100%} a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 22px}
+    header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(6,6,6,.76);border-bottom:1px solid var(--line)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0}
+    .brand img{width:44px;height:44px;object-fit:contain;border-radius:12px;background:#000;padding:5px;border:1px solid rgba(215,176,98,.28)}
+    .brand-copy strong{display:block;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+    .brand-copy span{display:block;color:var(--muted);font-size:12px}
+    nav ul{display:flex;list-style:none;gap:18px;padding:0;margin:0}
+    nav a{color:var(--muted);font-size:14px}
+    .actions{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700;font-size:14px}
+    .btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111}
+    .hero{padding:54px 0 28px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.025));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-copy,.contact-card,.cta-box{padding:26px}
+    .eyebrow{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(215,176,98,.12);border:1px solid rgba(215,176,98,.24);color:var(--gold);text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:.08em}
+    h1{font-size:clamp(34px,4vw,56px);line-height:1.02;letter-spacing:-.03em;margin:18px 0 14px;max-width:11ch}
+    .hero-copy p{color:var(--muted);font-size:16px;max-width:62ch;margin:0 0 22px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 24px;padding:0;list-style:none}
+    .chip{padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.035);font-size:13px}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+    .hero-media{overflow:hidden;position:relative;min-height:560px}.hero-media img{width:100%;height:100%;object-fit:cover}
+    .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.16) 45%, rgba(0,0,0,.62))}
+    .media-badge{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;padding:16px 18px;border-radius:18px;background:rgba(12,12,12,.68);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px)}
+    .media-badge strong{display:block;font-size:16px}.media-badge span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+    section{padding:26px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}
+    .section-head h2{font-size:28px;letter-spacing:-.02em;margin:0}.section-head p{margin:0;color:var(--muted);max-width:60ch}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feature{padding:22px}.feature .icon{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(215,176,98,.16), rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.08);font-size:18px}
+    .feature h3{margin:16px 0 8px;font-size:18px}.feature p{margin:0;color:var(--muted);font-size:14px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.shot{overflow:hidden;position:relative;min-height:260px}.shot img{width:100%;height:100%;object-fit:cover}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact-list{display:grid;gap:12px;margin-top:14px}.contact-item{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+    .contact-item span{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.contact-item strong,.contact-item a{display:block;margin-top:4px;font-size:15px}
+    footer{padding:28px 0 42px;color:var(--muted)}.foot{padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media (max-width:1024px){.hero-grid,.split,.gallery-grid,.feature-grid{grid-template-columns:1fr}.hero-media{min-height:420px}h1{max-width:none}}
+    @media (max-width:700px){nav{display:none}.actions .btn:nth-child(1){display:none}.hero-copy{padding:24px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="/media/uploads/logo-gold.png" alt="RPM Auto Vault logo" />
+      <div class="brand-copy">
+        <strong id="businessName">RPM Auto Vault</strong>
+        <span id="tagline">Climate-controlled indoor car storage in Lebanon, NJ</span>
+      </div>
+    </a>
+    <nav><ul><li><a href="#why">Why RPM</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#location">Location</a></li><li><a href="#book">Book</a></li></ul></nav>
+    <div class="actions">
+      <a class="btn" id="mapsTop" href="#" target="_blank" rel="noopener">Directions</a>
+      <a class="btn primary" id="igTop" href="#" target="_blank" rel="noopener">DM on Instagram</a>
+    </div>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="card hero-copy">
+        <div class="eyebrow" id="availabilityBadge">Spots available</div>
+        <h1 id="headline">Secure indoor storage for collectors, classics, exotics, and weekend cars.</h1>
+        <p id="subheadline">Climate-controlled space, 24/7 surveillance, easy in and out access, and a clean fully renovated facility right off Route 78 on US 22.</p>
+        <ul class="chips" id="featureBullets"></ul>
+        <div class="hero-cta"><a class="btn primary" id="igHero" href="#" target="_blank" rel="noopener">Check availability</a><a class="btn" href="#gallery">See the facility</a></div>
+      </div>
+      <div class="card hero-media">
+        <img id="heroImage" src="/media/uploads/hero-main.jpg" alt="RPM Auto Vault facility interior with polished floors and stored vehicles" />
+        <div class="media-badge"><strong id="heroCaption">Premium indoor vehicle storage with a clean, polished, high-end feel.</strong><span>Collectors, classics, SUVs, exotics, motorcycles, and cars that deserve a better place to sit.</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="why"><div class="container"><div class="section-head"><div><h2>Why RPM Auto Vault</h2><p>Built for owners who care about security, convenience, and presentation. This is not ordinary storage.</p></div></div><div class="feature-grid"><div class="card feature"><div class="icon">24</div><h3>24/7 surveillance</h3><p>Monitored indoor storage for vehicles you actually care about.</p></div><div class="card feature"><div class="icon">AC</div><h3>Climate controlled</h3><p>Protected indoor space designed to help preserve condition year-round.</p></div><div class="card feature"><div class="icon">IN</div><h3>Easy access</h3><p>Simple pickup and dropoff with quick access from Route 78 and US 22.</p></div></div></div></section>
+  <section id="gallery"><div class="container"><div class="section-head"><div><h2>Gallery</h2><p>Upload new facility and vehicle photos from the dashboard whenever you want.</p></div></div><div class="gallery-grid" id="galleryGrid"></div></div></section>
+  <section id="location"><div class="container split"><div class="card contact-card"><div class="section-head"><div><h2 id="locationHeading">Location and contact</h2><p id="directionsText">Conveniently located in Lebanon, NJ on US 22 and only about 2 minutes off Route 78.</p></div></div><div class="contact-list"><div class="contact-item"><span>Address</span><strong id="addressText">1120 US 22, Lebanon, NJ 08833</strong></div><div class="contact-item"><span>Email</span><a id="emailLink" href="mailto:rpmautovault@gmail.com">rpmautovault@gmail.com</a></div><div class="contact-item"><span>Instagram</span><a id="igContact" href="#" target="_blank" rel="noopener">@rpmautovault</a></div><div class="contact-item"><span>Booking</span><strong id="bookingText">DM on Instagram to reserve a spot right now.</strong></div></div></div><div class="card cta-box" id="book"><h2 style="margin-top:0">Need a spot for your car?</h2><p>Message RPM Auto Vault on Instagram for current availability, storage questions, or to set up pickup and dropoff details.</p><div class="hero-cta"><a class="btn primary" id="igBottom" href="#" target="_blank" rel="noopener">Book through Instagram</a><a class="btn" id="mapsBottom" href="#" target="_blank" rel="noopener">Open in Maps</a></div></div></div></section>
+</main>
+<footer><div class="container foot"><div><strong style="display:block;color:var(--text)" id="footerName">RPM Auto Vault</strong><span id="footerTagline">Climate-controlled indoor car storage in Lebanon, NJ.</span></div><div><span id="footerAddress">1120 US 22, Lebanon, NJ 08833</span></div></div></footer>
+<script>
+async function loadJSON(path){const res=await fetch(path,{cache:"no-store"});if(!res.ok) throw new Error(path);return await res.json();}
+function el(id){return document.getElementById(id);}
+Promise.all([loadJSON("/content/site-settings.json"),loadJSON("/content/homepage.json"),loadJSON("/content/hero-image.json"),loadJSON("/content/gallery-images.json"),loadJSON("/content/location.json"),loadJSON("/content/contact-info.json"),loadJSON("/content/availability.json")]).then(function(data){
+const site=data[0],home=data[1],hero=data[2],gallery=data[3],location=data[4],contact=data[5],avail=data[6];
+document.title=(site.business_name||"RPM Auto Vault")+" - Car Storage";
+var meta=document.querySelector('meta[name="description"]'); if(meta&&site.meta_description) meta.setAttribute("content",site.meta_description);
+el("businessName").textContent=site.business_name||""; el("footerName").textContent=site.business_name||"";
+el("tagline").textContent=site.tagline||""; el("footerTagline").textContent=site.tagline||"";
+el("addressText").textContent=site.address||""; el("footerAddress").textContent=site.address||"";
+el("emailLink").textContent=site.email||""; el("emailLink").href="mailto:"+(site.email||"");
+["igTop","igHero","igContact","igBottom"].forEach(function(id){el(id).href=site.instagram_url||"#";});
+["mapsTop","mapsBottom"].forEach(function(id){el(id).href=site.maps_url||"#";});
+el("headline").textContent=home.headline||""; el("subheadline").textContent=home.subheadline||"";
+var bulletWrap=el("featureBullets"); bulletWrap.innerHTML=""; (home.feature_bullets||[]).forEach(function(b){var li=document.createElement("li"); li.className="chip"; li.textContent=(typeof b==="string")?b:(b.bullet||""); bulletWrap.appendChild(li);});
+el("heroImage").src=hero.hero_image||""; el("heroImage").alt=hero.hero_image_alt||""; el("heroCaption").textContent=hero.hero_caption||"";
+var galleryWrap=el("galleryGrid"); galleryWrap.innerHTML=""; (gallery.images||[]).forEach(function(src,i){var card=document.createElement("div"); card.className="card shot"; var img=document.createElement("img"); img.src=(typeof src==="string")?src:(src.image||""); img.alt="RPM Auto Vault gallery image "+(i+1); card.appendChild(img); galleryWrap.appendChild(card);});
+el("locationHeading").textContent=location.heading||""; el("directionsText").textContent=location.directions_text||""; el("bookingText").textContent=contact.booking_text||"";
+if(avail.show_badge){el("availabilityBadge").style.display="inline-flex"; el("availabilityBadge").textContent=avail.badge_text||"Spots available";} else {el("availabilityBadge").style.display="none";}
+}).catch(function(){});
+</script>
+</body>
+</html>
