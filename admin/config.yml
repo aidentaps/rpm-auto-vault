@@ -21,6 +21,14 @@ collections:
             name: "feature_bullets"
             widget: "list"
             field: { label: "Bullet", name: "bullet", widget: "string" }
+          - label: "Upcoming events"
+            name: "upcoming_events"
+            widget: "list"
+            field: { label: "Event", name: "event", widget: "string" }
+          - label: "Services provided"
+            name: "services_provided"
+            widget: "list"
+            field: { label: "Service", name: "service", widget: "string" }
 
       - file: "content/hero-image.json"
         label: "Hero image"
